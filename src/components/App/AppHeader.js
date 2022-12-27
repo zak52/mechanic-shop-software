@@ -1,18 +1,19 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 
 // importing material UI components
 import './App.css';
 import { AppBar, Box, Toolbar, Typography, IconButton, Button} from '@material-ui/core';
 import { DiAptana } from "react-icons/di";
-
-
-
+import MenuIcon from '@mui/icons-material/Menu';
+import Sidebar from '../Navigation/Sidebar';
 
 
 export default function AppHeader() {
+
+
     return (
-        <AppBar position="static">
-            <Toolbar>
+        <AppBar className='appBar' position="static">
+            <Toolbar className='toolBar'>
                 <IconButton
                     size="large"
                     edge="start"

@@ -8,7 +8,7 @@ import Login from '../Login/Login';
 import useToken from './useToken';
 import AppHeader from './AppHeader';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from '../Navigation/NavBar';
+import Sidebar from '../Navigation/Sidebar';
 
 
 
@@ -22,16 +22,20 @@ function App() {
 
   return (
     <div>
-      <Navbar />
+      <AppHeader/>
+      <div className='App'>
+      <Sidebar/>
       <div className = "wrapper">
-        <Dashboard />
         <BrowserRouter>
           <Routes>
+            <Route path = "/" element={<Dashboard/>}/>
             <Route path = "/preferences" element={<Preferences />} />
           </Routes>
         </BrowserRouter>
       </div>
     </div>
+    </div>
+    
   );
 }
 

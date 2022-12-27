@@ -1,0 +1,70 @@
+.row{
+    bottom: 10%;
+    margin-bottom: 8%;
+}
+
+.row .toggleButton{
+    padding: 10;
+    margin-top: 5%;
+    margin-left: 8%;
+}
+
+.bottomrow{
+    margin-left: 8%;
+}
+
+
+.row .saleButton{
+    margin-left: 10x;
+}
+
+.row .inspectionButton{
+    margin-right: 10px;
+}
+
+.row .active {
+    background-color: blue;
+    color: white;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.col{
+    float:left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col .dashboardBoxes{
+    margin: 10px;
+    margin-top: 20px;
+    border: 1pt solid black ;
+    background-color: lightgray;
+    padding-left: 2%;
+}
+
+.dashboardBoxes .titleAndIcon{
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboardBoxes #icon{
+    flex: 5%;
+    display: grid;
+    place-items: center;
+    margin-top: 5%;
+}
+
+.dashboardBoxes #title{
+    flex: 95%;
+    margin-top: 5%;
+}

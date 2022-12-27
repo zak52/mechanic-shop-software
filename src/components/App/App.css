@@ -1,14 +1,35 @@
 .wrapper {
-  padding: 20px;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
-.App {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .toolbarButtons{
   margin-left: auto;
+}
+
+.App{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../assets/loginPageBackground.jpeg");
+  display: flex;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+
+#active{
+  background-color: #293846;
+}
+
+.appBar{
+  background-color: #2f4050;
+}
+
+.toolBar{
+  background-color: #2f4050;
 }
