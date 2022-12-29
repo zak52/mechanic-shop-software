@@ -1,0 +1,60 @@
+.calendar {
+  width: 100%;
+  height: 85%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.calendar-nav {
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 10px 0;
+}
+
+.calendar-view-buttons {
+  flex: 70%;
+  align-items: right;
+  text-align: right;
+  margin-bottom: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  color: #333;
+}
+
+td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td.today {
+  background-color: #ffc107;
+  color: white;
+}
+
+td.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+tr.days_of_Week{
+  margin: 0;
+  padding: 0;
+  height: 0;
+  text-align: center;
+
+}

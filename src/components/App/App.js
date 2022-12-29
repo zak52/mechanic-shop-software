@@ -9,7 +9,7 @@ import useToken from './useToken';
 import AppHeader from './AppHeader';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sidebar from '../Navigation/Sidebar';
-
+import Booking from '../Booking/Booking';
 
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
           <Routes>
             <Route path = "/" element={<Dashboard/>}/>
             <Route path = "/preferences" element={<Preferences />} />
+            <Route path = "/booking" element={<Booking />} />
           </Routes>
         </BrowserRouter>
       </div>
