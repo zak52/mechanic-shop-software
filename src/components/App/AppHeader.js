@@ -9,7 +9,11 @@ import Sidebar from '../Navigation/Sidebar';
 
 
 export default function AppHeader() {
+    const [showMenu, setShowMenu] = useState(false);
 
+    function handleMenuToggle() {
+        setShowMenu(!showMenu);
+    }
 
     return (
         <AppBar className='appBar' position="static">
@@ -26,6 +30,32 @@ export default function AppHeader() {
                  component="div" sx= {{ flexGrow: 1 }}>
                     Mechanic AutoShop Software
                  </Typography>
+                 <div className='header-search-container'
+                    size="large"
+                    edge="end"
+                    color="inherit"
+                    sx={{ 
+                        mr: 10 }}
+                    >
+                    <input type="text" className="header-search" placeholder="Search...">
+                    </input>
+                    <button className='add-button'  onClick={handleMenuToggle}>+</button>
+                    {showMenu && (
+                        <div className='header-dropdown'>
+                            <div className='header-dropdown-option'>
+                                New Customer
+                            </div>
+                            <div className='header-dropdown-option'>
+                                New Booking
+                            </div>
+                            <div className='header-dropdown-option'>
+                                New Job
+                            </div>
+                        </div>
+                    )
+
+                    }
+                 </div>
                  <div className= 'toolbarButtons'>
                  <IconButton
                     size="large"

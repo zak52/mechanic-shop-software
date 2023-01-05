@@ -10,6 +10,7 @@ import AppHeader from './AppHeader';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sidebar from '../Navigation/Sidebar';
 import Booking from '../Booking/Booking';
+import NewBookingScreen from '../New-Booking/New-Booking-Screen';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path = "/" element={<Dashboard/>}/>
             <Route path = "/preferences" element={<Preferences />} />
             <Route path = "/booking" element={<Booking />} />
+            <Route path = "/newBooking" element={<NewBookingScreen/>} />
           </Routes>
         </BrowserRouter>
       </div>

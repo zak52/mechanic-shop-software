@@ -33,3 +33,53 @@ body{
 .toolBar{
   background-color: #2f4050;
 }
+
+.header-search-container {
+  display: flex;
+  margin-left: 60%;
+  align-items: flex-end;
+  background-color: #444;
+  border-radius: 999px;
+}
+
+.header-search {
+  width: 200px;
+  height: 30px;
+  padding: 0 10px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.add-button {
+  width: 30px;
+  height: 30px;
+  background-color: #444;
+  border: none;
+  color: #fff;
+  margin-left: 5%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.header-dropdown-option {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.header-dropdown-option:hover {
+  background-color: #f5f5f5;
+}
