@@ -15,7 +15,7 @@ export const ActivityFeedTable = () => {
 
 
     return (
-        <table>
+        <table className="activityFeedTable">
             <thead>
                 <tr>
                     <th>

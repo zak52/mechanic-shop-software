@@ -1,5 +1,7 @@
 import React from 'react';
 import './Booking.css';
+import WeekView from './WeekView.jsx';
+import DayView from './DayView';
 
 class Booking extends React.Component {
   constructor(props) {
@@ -85,38 +87,33 @@ class Booking extends React.Component {
       }
 
       calendarContent = (
-        <table>
-          <thead>
-            <tr className='days_of_Week' >
-              {daysOfWeek.map((day) => <th key={day}>{day}</th>)}
-            </tr>
-          </thead>
-          <tbody>
-            {calendarRows}
-          </tbody>
-        </table>
+        <div className="calendar">
+            <div className="calendar-nav">
+                <button onClick={this.goToPrevMonth}>&lt;</button>
+                {months[this.state.currentMonth]} {this.state.currentYear}
+                <button onClick={this.goToNextMonth}>&gt;</button>
+              </div>
+          <table>
+            <thead>
+              <tr className='days_of_Week' >
+                {daysOfWeek.map((day) => <th key={day}>{day}</th>)}
+              </tr>
+            </thead>
+            <tbody>
+              {calendarRows}
+            </tbody>
+          </table>
+          </div>
       );
     } else if (this.state.currentView === 'week') {
       // Generate the calendar grid for the week view
 
       // Get the current day of the week
       const currentDay = new Date().getDay();
-      // Create an array for the calendar grid
-      const calendar = [];
-      // Add the days of the week
-      for (let i = 0; i < 7; i++) {
-        calendar.push(<td key={i}>{daysOfWeek[i]}</td>);
-      }
+
+
       calendarContent = (
-        <table>
-          <thead>
-            <tr className='days_of_Week'>
-              {calendar} 
-            </tr> 
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
+        <WeekView/>
       );
     } else if (this.state.currentView === 'day') {
       // Generate the calendar grid for the day view
@@ -128,31 +125,17 @@ class Booking extends React.Component {
       // Add the current day of the week
       calendar.push(<td key={currentDay}>{daysOfWeek[currentDay]}</td>);
       calendarContent = (
-        <table>
-          <thead>
-            <tr className='days_of_Week'>
-              {calendar} 
-            </tr> 
-          </thead>
-          <tbody>
-
-          </tbody>
-        </table>
+        <DayView/>
       );
     }
 
     return (
-      <div className="calendar">
-        <div className="calendar-view-buttons">
-          <button onClick={() => this.switchView('month')}>Month</button>
-          <button onClick={() => this.switchView('week')}>Week</button>
-          <button onClick={() => this.switchView('day')}>Day</button>
-        </div>
-        <div className="calendar-nav">
-          <button onClick={this.goToPrevMonth}>&lt;</button>
-          {months[this.state.currentMonth]} {this.state.currentYear}
-          <button onClick={this.goToNextMonth}>&gt;</button>
-        </div>
+      <div className="fullcalendar">
+          <div className="calendar-view-buttons">
+            <button onClick={() => this.switchView('month')}>Month</button>
+            <button onClick={() => this.switchView('week')}>Week</button>
+            <button onClick={() => this.switchView('day')}>Day</button>
+          </div>
         {calendarContent}
       </div>
     );
